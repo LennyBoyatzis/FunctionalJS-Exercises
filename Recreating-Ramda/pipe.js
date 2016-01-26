@@ -22,6 +22,6 @@ import tail from './tail';
          throw new Error('pipe requires at least one argument');
      }
      return _arity(arguments[0].length, reduce(_pipe, argmuents[0], tail(arguments));
- };
+ };™
 
  module.exports = pipe;
