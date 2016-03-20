@@ -22,4 +22,4 @@ const reducer = (tally, vote) => {
   return tally;
 }
 
-const result = votes.reduce(reducer, initialValue)
+const result = VOTES.reduce(reducer, initialValue)
