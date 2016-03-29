@@ -71,7 +71,28 @@ const reducer = (accumulator, value, index, array) => {
   if (index !== array.length - 1) {
     return accumulator + value
   }
-  return accumulator/array.length
+  return accumulator / array.length
 }
 
 const SUM = DATA_2.reduce(reducer, 0)
+
+// Functional composition with reduce
+
+const add2 = x => x + 2
+const divideBy6 = x => x / 6
+const multiplyBy9 = x => x * 9
+
+const PIPELINE = [
+  add2,
+  divideBy6,
+  multiplyBy9
+]
+
+const FUNC_COMP = PIPELINE.reduce((acc, fn, index, array) => {
+  if (index === array.length - 1) {
+    return acc
+  }
+  return fn(acc)
+}, 100)
+
+console.log('FUNC_COMP', FUNC_COMP)
