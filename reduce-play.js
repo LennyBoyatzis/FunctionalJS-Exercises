@@ -64,3 +64,14 @@ const EVEN_ARRAY_FILTERED = DATA_2.filter((val) => {
 })
 
 console.log('EVEN_ARRAY_FILTERED', EVEN_ARRAY_FILTERED)
+
+// Advanced reduce (3rd and 4th parameters)
+
+const reducer = (accumulator, value, index, array) => {
+  if (index !== array.length - 1) {
+    return accumulator + value
+  }
+  return accumulator/array.length
+}
+
+const SUM = DATA_2.reduce(reducer, 0)
