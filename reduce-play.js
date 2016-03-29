@@ -44,7 +44,7 @@ const NEW_ARRAY = DATA.map((val) => {
   return val * 2
 })
 
-// Array Transformations (Map)
+// Array Transformations (Reduce)
 
 const DATA_2 = [1,2,3,4,5,6,7,8]
 
@@ -56,3 +56,11 @@ const EVEN_ARRAY = DATA_2.reduce((acc, value) => {
 }, [])
 
 console.log("EVEN_ARRAY", EVEN_ARRAY)
+
+// Array Transformations (Filter)
+
+const EVEN_ARRAY_FILTERED = DATA_2.filter((val) => {
+  if (val % 2 === 0) return val
+})
+
+console.log('EVEN_ARRAY_FILTERED', EVEN_ARRAY_FILTERED)
