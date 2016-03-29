@@ -39,3 +39,20 @@ const doubled = DATA.reduce((acc, value) => {
 console.log("Doubled", doubled)
 
 // Array Transformations (Map)
+
+const NEW_ARRAY = DATA.map((val) => {
+  return val * 2
+})
+
+// Array Transformations (Map)
+
+const DATA_2 = [1,2,3,4,5,6,7,8]
+
+const EVEN_ARRAY = DATA_2.reduce((acc, value) => {
+  if (value % 2 === 0) {
+    acc.push(value)
+  }
+  return acc
+}, [])
+
+console.log("EVEN_ARRAY", EVEN_ARRAY)
