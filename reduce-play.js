@@ -88,11 +88,14 @@ const PIPELINE = [
   multiplyBy9
 ]
 
-const FUNC_COMP = PIPELINE.reduce((acc, fn, index, array) => {
-  if (index === array.length - 1) {
-    return acc
-  }
+const FUNC_COMP = PIPELINE.reduce((acc, fn) => {
   return fn(acc)
-}, 100)
+}, 4)
 
 console.log('FUNC_COMP', FUNC_COMP)
+
+const FUNC_COMP_RIGHT = PIPELINE.reduceRight((acc, fn) => {
+  return fn(acc)
+}, 4)
+
+console.log('FUNC_COMP_RIGHT', FUNC_COMP_RIGHT)
