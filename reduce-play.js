@@ -26,8 +26,6 @@ const LANGUAGE_OBJ = LANGUAGE_ARRAY.reduce((accumulator, currentVal, index, arra
   return accumulator
 }, {})
 
-console.log("LANGUAGE_OBJ", LANGUAGE_OBJ)
-
 // Array Transformations (Reduce)
 
 const DATA = [1,2,3]
@@ -35,8 +33,6 @@ const doubled = DATA.reduce((acc, value) => {
   acc.push(value * 2)
   return acc
 }, [])
-
-console.log("Doubled", doubled)
 
 // Array Transformations (Map)
 
@@ -55,15 +51,11 @@ const EVEN_ARRAY = DATA_2.reduce((acc, value) => {
   return acc
 }, [])
 
-console.log("EVEN_ARRAY", EVEN_ARRAY)
-
 // Array Transformations (Filter)
 
 const EVEN_ARRAY_FILTERED = DATA_2.filter((val) => {
   if (val % 2 === 0) return val
 })
-
-console.log('EVEN_ARRAY_FILTERED', EVEN_ARRAY_FILTERED)
 
 // Advanced reduce (3rd and 4th parameters)
 
@@ -92,10 +84,6 @@ const FUNC_COMP = PIPELINE.reduce((acc, fn) => {
   return fn(acc)
 }, 4)
 
-console.log('FUNC_COMP', FUNC_COMP)
-
 const FUNC_COMP_RIGHT = PIPELINE.reduceRight((acc, fn) => {
   return fn(acc)
 }, 4)
-
-console.log('FUNC_COMP_RIGHT', FUNC_COMP_RIGHT)
