@@ -39,7 +39,7 @@ console.log(cp instanceof Point); // true
 // Inside the body of a class definition
 // A class body can only contain methods, but not data properties
 // There a 3 kinds of methods that you often find in class literals
-// 1. constructor
+// 1. constructor methods
 // 2. static methods
 // 3. prototype methods
 
@@ -63,3 +63,26 @@ let foo = new Foo(123);
 // Static methods are properties of Foo itself
 // Prototype properties - properties of Foo.prototype (inherited by instances of foo)
 // In a derived class, you must call super() before you can use this:
+
+class EthnicPerson {
+  constructor(eyeColor,height) {
+    this.eyeColor = eyeColor;
+    this.height = height;
+  }
+  introduction() {
+    return `I have ${this.eyeColor} eyes and I'm ${this.height}`;
+  }
+}
+
+class ItalianPerson extends EthnicPerson {
+  constructor(eyeColor,height,name) {
+    super(eyeColor,height);
+    this.name = name;
+  }
+  toString() {
+    return super.introduction() + ' and my name is ' + this.name;
+  }
+}
+
+let ItalianMan = new ItalianPerson('Blue','5 foot 3 inches','VitoBZ')
+console.log(`cp is... ${ItalianMan}`)
