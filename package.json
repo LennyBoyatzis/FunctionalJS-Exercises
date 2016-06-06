@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "es6-promise": "3.2.1",
     "f": "casualjs/f",
+    "isomorphic-fetch": "2.2.1",
     "ramda": "^0.19.1",
     "vectorious": "^4.0.4"
   },
